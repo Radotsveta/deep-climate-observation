@@ -91,4 +91,8 @@ Climate Data (arrays)
 → AI Simulation (Prediction Button)  
 → Output Forecast
 
+---
 
+## Conclusion
+
+The project demonstrates how AI concepts can be applied to climate monitoring systems through simplified but realistic implementations of data analysis and prediction workflows.
