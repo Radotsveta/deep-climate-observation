@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Deep Climate Observation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card" id="statusCard">
+    <h2>🌍 Live Climate Status</h2>
+    <h3 id="statusText">Loading system...</h3>
+    </div>
+
+    <h1>🌍 Deep Climate Observation</h1>
+    <p>AI-powered Climate Monitoring Prototype</p>
+
+    <div class="card">
+        <h2>Current Climate Data</h2>
+
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Temperature (°C)</th>
+            </tr>
+
+            <tr>
+                <td>2020</td>
+                <td>14.8</td>
+            </tr>
+
+            <tr>
+                <td>2021</td>
+                <td>15.0</td>
+            </tr>
+
+            <tr>
+                <td>2022</td>
+                <td>15.1</td>
+            </tr>
+
+            <tr>
+                <td>2023</td>
+                <td>15.3</td>
+            </tr>
+
+            <tr>
+                <td>2024</td>
+                <td>15.4</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>AI Analysis</h2>
+
+        <button id="predictBtn">
+            Run AI Prediction
+        </button>
+
+        <p id="result">
+            Waiting for prediction...
+        </p>
+    </div>
+
+    <div class="card">
+    <h2>Climate Trend Graph</h2>
+    <canvas id="climateChart"></canvas>
+    </div>
+
+    <div class="card">
+    <h2>🛰️ Satellite AI Observation</h2>
+    <p>
+        Data from simulated Earth observation satellites is processed using CNN-based image analysis.
+    </p>
+
+    <ul>
+        <li>Cloud pattern detection</li>
+        <li>Ice melting tracking</li>
+        <li>Ocean temperature estimation</li>
+    </ul>
+    </div>
+
+    <div class="card">
+        <h2>Neural Networks Used</h2>
+
+        <ul>
+            <li>LSTM – Climate Forecasting</li>
+            <li>CNN – Satellite Image Analysis</li>
+            <li>Transformer – Long-term Predictions</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
