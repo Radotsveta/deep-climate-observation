@@ -192,3 +192,30 @@ canvas {
     transform: scale(1.05);
     transition: 0.3s;
 }
+
+/* AVERAGE TEMPERATURE */
+.avg-temp h3 {
+    color: #4dd0e1;
+}
+
+.avg-temp p {
+    color: #4dd0e1;
+}
+
+/* CLIMATE RISK */
+.climate-risk h3 {
+    color: #ffb74d;
+}
+
+.climate-risk p {
+    color: #ff7043;
+}
+
+/* AI CONFIDENCE */
+.ai-confidence h3 {
+    color: #81c784;
+}
+
+.ai-confidence p {
+    color: #00e676;
+}
