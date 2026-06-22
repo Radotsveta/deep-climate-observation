@@ -17,11 +17,9 @@ updateStatus();
 const button = document.getElementById("predictBtn");
 const result = document.getElementById("result");
 
-// Climate data
 const years = [2020, 2021, 2022, 2023, 2024];
 const temps = [14.8, 15.0, 15.1, 15.3, 15.4];
 
-// GRAPH
 const ctx = document.getElementById('climateChart');
 
 new Chart(ctx, {
@@ -31,14 +29,13 @@ new Chart(ctx, {
         datasets: [{
             label: 'Temperature (°C)',
             data: temps,
-            borderColor: 'green',
+            borderColor: '#00ff99',
             fill: false,
             tension: 0.3
         }]
     }
 });
 
-// AI BUTTON
 button.addEventListener("click", () => {
 
     result.innerHTML = "Analyzing climate data... ⏳";
