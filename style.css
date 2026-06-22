@@ -219,3 +219,9 @@ canvas {
 .ai-confidence p {
     color: #00e676;
 }
+
+.view-buttons button.active {
+    transform: scale(1.08);
+    border-color: white;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
