@@ -34,9 +34,9 @@ body {
 
 /* TITLE */
 h1 {
-    color: #00ff99;
+    color: #6ec6ff;
     margin-top: 30px;
-    text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+    text-shadow: 0 0 10px rgba(110, 198, 255, 0.6);
 }
 
 p {
@@ -52,15 +52,15 @@ p {
     width: 75%;
     border-radius: 12px;
 
-    border: 1px solid rgba(0, 255, 153, 0.2);
-    box-shadow: 0 0 15px rgba(0, 255, 153, 0.15);
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.15);
 
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(0, 255, 153, 0.25);
+    box-shadow: 0 0 25px rgba(52, 152, 219, 0.3);
 }
 
 /* TABLE */
@@ -71,11 +71,11 @@ table {
 }
 
 table, th, td {
-    border: 1px solid rgba(0, 255, 153, 0.3);
+    border: 1px solid rgba(52, 152, 219, 0.3);
 }
 
 th {
-    background: rgba(0, 255, 153, 0.1);
+    background: rgba(52, 152, 219, 0.15);
 }
 
 th, td {
@@ -87,17 +87,24 @@ button {
     padding: 12px 25px;
     font-size: 16px;
     cursor: pointer;
-    background: #00ff99;
-    border: none;
-    border-radius: 8px;
-    color: #0b141a;
+
+    background: rgba(52, 152, 219, 0.25);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(52, 152, 219, 0.5);
+    border-radius: 10px;
+
+    color: white;
     font-weight: bold;
-    transition: 0.2s;
+
+    transition: 0.3s;
 }
 
 button:hover {
-    background: #00cc77;
+    background: rgba(52, 152, 219, 0.45);
     transform: scale(1.05);
+
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.4);
 }
 
 /* CHART */
@@ -119,11 +126,22 @@ canvas {
 }
 
 .stat-card h3 {
-    color: #00ff99;
+    color: #6ec6ff;
 }
 
 .stat-card p {
     font-size: 28px;
     font-weight: bold;
     color: white;
+}
+
+.weather-icons {
+    font-size: 40px;
+    margin: 20px 0;
+    letter-spacing: 15px;
+}
+
+.weather-icons:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
 }
