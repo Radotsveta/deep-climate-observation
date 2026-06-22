@@ -145,3 +145,28 @@ canvas {
     transform: scale(1.05);
     transition: 0.3s;
 }
+
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.view-buttons button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+
+    background: rgba(52, 152, 219, 0.2);
+    border: 1px solid rgba(52, 152, 219, 0.5);
+    border-radius: 8px;
+
+    color: white;
+    transition: 0.3s;
+}
+
+.view-buttons button:hover {
+    background: rgba(52, 152, 219, 0.4);
+    transform: scale(1.05);
+}
