@@ -99,10 +99,15 @@ button.addEventListener("click", () => {
     }, 2000);
 });
 
-function setView(view) {
+function setView(view, btn) {
     currentView = view;
 
     updateChart(view);
+
+    document.querySelectorAll(".view-buttons button")
+        .forEach(b => b.classList.remove("active"));
+
+    if (btn) btn.classList.add("active");
 
     const data = climateData[view].temps;
     const forecast = calculateForecast(data);
