@@ -36,16 +36,23 @@ h1 {
     text-shadow: 0 0 10px rgba(110, 198, 255, 0.6);
 }
 
+h2 {
+    color: #8fd8ff;
+}
+
 p {
     color: #b8c7c1;
+    line-height: 1.6;
 }
 
 /* CARDS */
 .card {
     background: rgba(18, 31, 39, 0.75);
     backdrop-filter: blur(8px);
+
     padding: 20px;
     margin: 20px auto;
+
     width: 75%;
     border-radius: 12px;
 
@@ -60,23 +67,43 @@ p {
     box-shadow: 0 0 25px rgba(52, 152, 219, 0.3);
 }
 
-/* TABLE */
+/* DATE CARD */
+#currentDate {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6ec6ff;
+}
+
+/* TABLES */
 table {
-    margin: auto;
+    width: 90%;
+    margin: 15px auto;
     border-collapse: collapse;
     color: #e6f1ec;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid rgba(52, 152, 219, 0.3);
 }
 
 th {
-    background: rgba(52, 152, 219, 0.15);
+    background: rgba(52, 152, 219, 0.2);
+    color: #8fd8ff;
 }
 
-th, td {
-    padding: 10px;
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+tr:hover {
+    background: rgba(52, 152, 219, 0.08);
+}
+
+th,
+td {
+    padding: 12px;
 }
 
 /* MAIN BUTTON */
@@ -105,12 +132,13 @@ button:hover {
 
 /* CHART */
 canvas {
-    max-width: 600px;
+    max-width: 800px;
+    width: 100%;
     margin: auto;
     display: block;
 }
 
-/* STATS */
+/* STATS SECTION */
 .stats-container {
     display: flex;
     justify-content: center;
@@ -122,75 +150,9 @@ canvas {
     width: 220px;
 }
 
-.stat-card h3 {
-    color: #6ec6ff;
-}
-
 .stat-card p {
     font-size: 28px;
     font-weight: bold;
-    color: white;
-}
-
-/* VIEW BUTTONS CONTAINER */
-.view-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 10px 0 20px 0;
-}
-
-/* BASE VIEW BUTTON */
-.view-buttons button {
-    padding: 10px 15px;
-    font-size: 14px;
-    cursor: pointer;
-
-    border: 1px solid rgba(52, 152, 219, 0.5);
-    border-radius: 8px;
-
-    color: white;
-    transition: 0.3s;
-}
-
-/* INDIVIDUAL COLORS */
-.daily-btn {
-    border-color: #4dd0e1;
-    background: rgba(77, 208, 225, 0.15);
-}
-
-.weekly-btn {
-    border-color: #81c784;
-    background: rgba(129, 199, 132, 0.15);
-}
-
-.monthly-btn {
-    border-color: #ffb74d;
-    background: rgba(255, 183, 77, 0.15);
-}
-
-.yearly-btn {
-    border-color: #ba68c8;
-    background: rgba(186, 104, 200, 0.15);
-}
-
-/* HOVER */
-.view-buttons button:hover {
-    filter: brightness(1.2);
-    transform: translateY(-2px);
-}
-
-/* ICON AREA (optional) */
-.weather-icons {
-    font-size: 40px;
-    margin: 20px 0;
-    letter-spacing: 15px;
-}
-
-.weather-icons:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
 }
 
 /* AVERAGE TEMPERATURE */
@@ -200,6 +162,7 @@ canvas {
 
 .avg-temp p {
     color: #4dd0e1;
+    text-shadow: 0 0 10px rgba(77, 208, 225, 0.5);
 }
 
 /* CLIMATE RISK */
@@ -209,6 +172,7 @@ canvas {
 
 .climate-risk p {
     color: #ff7043;
+    text-shadow: 0 0 10px rgba(255, 112, 67, 0.5);
 }
 
 /* AI CONFIDENCE */
@@ -218,10 +182,111 @@ canvas {
 
 .ai-confidence p {
     color: #00e676;
+    text-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
 }
 
+/* VIEW BUTTONS */
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.view-buttons button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* DAILY */
+.daily-btn {
+    background: rgba(77, 208, 225, 0.15);
+    border-color: #4dd0e1;
+}
+
+/* WEEKLY */
+.weekly-btn {
+    background: rgba(129, 199, 132, 0.15);
+    border-color: #81c784;
+}
+
+/* MONTHLY */
+.monthly-btn {
+    background: rgba(255, 183, 77, 0.15);
+    border-color: #ffb74d;
+}
+
+/* YEARLY */
+.yearly-btn {
+    background: rgba(186, 104, 200, 0.15);
+    border-color: #ba68c8;
+}
+
+/* BUTTON HOVER */
+.view-buttons button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+/* ACTIVE BUTTON */
 .view-buttons button.active {
     transform: scale(1.08);
     border-color: white;
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+}
+
+/* RESULT BOX */
+#result {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+/* LISTS */
+ul {
+    text-align: left;
+    display: inline-block;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* STATUS */
+#statusText {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .card {
+        width: 92%;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 85%;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .view-buttons {
+        flex-direction: column;
+    }
+
+    .view-buttons button {
+        width: 100%;
+    }
 }
