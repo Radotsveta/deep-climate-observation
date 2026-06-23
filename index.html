@@ -10,57 +10,130 @@
 
     <div class="card" id="statusCard">
         <p>System Status: Online</p>
-        <h2> Live Climate Status</h2>
+        <h2>Live Climate Status</h2>
         <h3 id="statusText">Loading system...</h3>
     </div>
 
     <h1>Deep Climate Observation</h1>
     <p>AI-assisted Climate Monitoring Prototype (Simulation System)</p>
 
+    <div class="card">
+        <h2>Current Date</h2>
+        <p id="currentDate"></p>
+    </div>
+
     <div class="stats-container">
 
         <div class="card stat-card avg-temp">
-        <h3>Average Temperature</h3>
-        <p>15.4°C</p>
+            <h3>Average Temperature</h3>
+            <p>15.4°C</p>
+        </div>
+
+        <div class="card stat-card climate-risk">
+            <h3>Climate Risk</h3>
+            <p>Moderate</p>
+        </div>
+
+        <div class="card stat-card ai-confidence">
+            <h3>AI Confidence</h3>
+            <p>92%</p>
+        </div>
+
     </div>
 
-    <div class="card stat-card climate-risk">
-        <h3>Climate Risk</h3>
-        <p>Moderate</p>
-    </div>
-
-    <div class="card stat-card ai-confidence">
-        <h3>AI Confidence</h3>
-        <p>92%</p>
-    </div>
-
-    </div>
-
+    <!-- PAST 4 WEEKS -->
     <div class="card">
-        <h2>Current Climate Data</h2>
+        <h2>Climate Data - Last 4 Weeks</h2>
 
         <table>
             <tr>
-                <th>Year</th>
+                <th>Week</th>
+                <th>Average Temperature (°C)</th>
+            </tr>
+
+            <tr>
+                <td>Week -4</td>
+                <td>14.8</td>
+            </tr>
+
+            <tr>
+                <td>Week -3</td>
+                <td>15.0</td>
+            </tr>
+
+            <tr>
+                <td>Week -2</td>
+                <td>15.2</td>
+            </tr>
+
+            <tr>
+                <td>Week -1</td>
+                <td>15.3</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- CURRENT WEEK -->
+    <div class="card">
+        <h2>Current Week Climate Data</h2>
+
+        <table>
+            <tr>
+                <th>Day</th>
                 <th>Temperature (°C)</th>
             </tr>
-            <tr><td>2020</td><td>14.8</td></tr>
-            <tr><td>2021</td><td>15.0</td></tr>
-            <tr><td>2022</td><td>15.1</td></tr>
-            <tr><td>2023</td><td>15.3</td></tr>
-            <tr><td>2024</td><td>15.4</td></tr>
+
+            <tr><td>Monday</td><td>15.1</td></tr>
+            <tr><td>Tuesday</td><td>15.3</td></tr>
+            <tr><td>Wednesday</td><td>15.2</td></tr>
+            <tr><td>Thursday</td><td>15.4</td></tr>
+            <tr><td>Friday</td><td>15.5</td></tr>
+            <tr><td>Saturday</td><td>15.6</td></tr>
+            <tr><td>Sunday</td><td>15.4</td></tr>
+        </table>
+    </div>
+
+    <!-- FUTURE WEEKS -->
+    <div class="card">
+        <h2>AI Forecast - Next 4 Weeks</h2>
+
+        <table>
+            <tr>
+                <th>Future Week</th>
+                <th>Predicted Temperature (°C)</th>
+            </tr>
+
+            <tr>
+                <td>Week +1</td>
+                <td>15.6</td>
+            </tr>
+
+            <tr>
+                <td>Week +2</td>
+                <td>15.7</td>
+            </tr>
+
+            <tr>
+                <td>Week +3</td>
+                <td>15.8</td>
+            </tr>
+
+            <tr>
+                <td>Week +4</td>
+                <td>15.9</td>
+            </tr>
         </table>
     </div>
 
     <div class="card">
-    <h2>Analysis Mode</h2>
+        <h2>Analysis Mode</h2>
 
-    <div class="view-buttons">
-        <button onclick="setView('daily')">Daily</button>
-        <button onclick="setView('weekly')">Weekly</button>
-        <button onclick="setView('monthly')">Monthly</button>
-        <button onclick="setView('yearly')">Yearly</button>
-    </div>
+        <div class="view-buttons">
+            <button class="daily-btn" onclick="setView('daily', this)">Daily</button>
+            <button class="weekly-btn" onclick="setView('weekly', this)">Weekly</button>
+            <button class="monthly-btn" onclick="setView('monthly', this)">Monthly</button>
+            <button class="yearly-btn" onclick="setView('yearly', this)">Yearly</button>
+        </div>
     </div>
 
     <div class="card">
@@ -78,7 +151,12 @@
 
     <div class="card">
         <h2>Satellite AI Observation</h2>
-        <p>Data from simulated Earth observation satellites is processed using CNN-based analysis.</p>
+
+        <p>
+            Data from simulated Earth observation satellites is processed
+            using CNN-based analysis.
+        </p>
+
         <ul>
             <li>Cloud pattern detection</li>
             <li>Ice melting tracking</li>
@@ -88,12 +166,25 @@
 
     <div class="card">
         <h2>Neural Networks Used</h2>
+
         <ul>
             <li>LSTM – Climate Forecasting</li>
             <li>CNN – Satellite Image Analysis</li>
             <li>Transformer – Long-term Predictions</li>
         </ul>
     </div>
+
+    <script>
+        const today = new Date();
+
+        document.getElementById("currentDate").innerHTML =
+            today.toLocaleDateString("en-GB", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
